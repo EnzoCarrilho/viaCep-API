@@ -1,7 +1,7 @@
 'use strict'
 
 async function pesquisarCep(cep){
-    const url = `http://viacep.com.br/ws/${cep}/json/`
+    const url = `https://corsproxy.io/?https://cdn.apicep.com/file/apicep/${cep}.json`
     const response = await fetch(url)
     const data =  await response.json()
     return data
